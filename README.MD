@@ -1,2 +1,2 @@
 The ultimate noob data structures repo.
-feel free to clone:)
+feel free to clone it :)
