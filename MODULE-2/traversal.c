@@ -8,52 +8,53 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
 //how to declare a linked list? 
 
-struct node {
-    int data;
-    struct node *next;
 
+struct node {
+	int data;
+	struct node * next;
 };
 
-void linkedlist(struct node * ptr) {
-    while(ptr!=NULL) {
-        printf("Element : %d \n",ptr->next);
-        ptr = ptr -> next;
+// now write a user defined function for the logic
 
+// concept
+// head         second         third
+//  ______      _______       _______
+// |__|___| -> |___|___| - > |___|___|
+// data  next                      null                
+
+void linkedlist(struct node *pointer) {
+    while(pointer!=NULL) {
+        printf(" %d \n",pointer -> data);
+        pointer = pointer -> next;
     }
 }
-
 
 int main() {
     struct node *head;
     struct node *second;
     struct node *third;
-    struct node *fourth;
-
-    head = (struct node *)malloc(sizeof(struct node));
-    second = (struct node *)malloc(sizeof(struct node));
-    third = (struct node *)malloc(sizeof(struct node));
-    fourth = (struct node *)malloc(sizeof(struct node));
     
 
+    head = (struct node*)malloc(sizeof(struct node));
+    second = (struct node*)malloc(sizeof(struct node));
+    third = (struct node*)malloc(sizeof(struct node));
 
-    //now inserting data in the nodes
+    //now we need to assign the values
 
-    head -> data = 7;
+    head -> data = 48;
     head -> next = second;
-    
 
-    second ->data = 447;
+    second -> data = 64;
     second -> next = third;
 
-    third -> data = 5654;
-    third -> next = fourth;
+    third -> data = 62;
+    third -> next = NULL;  //last node of the linkedlist
 
-    fourth -> data = 354;
-    fourth -> next = NULL;     //last node
-    
+    //now call the userdefined function
+
     linkedlist(head);
     return 0;
 }
-
