@@ -58,3 +58,6 @@ int main() {
     linkedlist(head);
     return 0;
 }
+
+
+//error : line expected a field name
