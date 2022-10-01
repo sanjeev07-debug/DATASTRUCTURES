@@ -32,4 +32,3 @@ int main() {
     printarray(arr,N);
     return 0;
 }
-
