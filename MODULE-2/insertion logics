@@ -1,0 +1,49 @@
+void begin(int val) {
+    struct node * head,int *newnode;
+    newnode = (Struct node*)malloc(sizeof(struct node));
+    newnode -> data = val;
+    newnode -> next = head;
+    head = newnode;
+}
+
+void end(int val) {
+    struct node * head,int *newnode;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    pointer -> data = val;
+    pointer = head;
+    while(pointer -> next != 0) {
+        pointer = pointer -> next;
+    }
+    pointer -> next = NULL;
+    pointer = newnode;
+}
+
+void afternode(struct node *head,int x,int info) {
+    newnode = (struct node*)malloc(struct node);
+    newnode -> data = val;
+    pointer = head;
+    while(pointer ->data = x) {
+    pointer = pointer -> next;
+    }
+    if(pointer -> data = x) {
+        newnode -> next = pointer -> next;
+        pointer -> pointer = newnode;
+    }
+}
+
+
+void beforenode(struct node*head,int x,int info) {
+    struct node *pointer,*prepointer,*newnode;
+    newnode = (Struct node*)sizeof(struct node);
+    newnode -> data = info;
+    pointer = head;
+    prepointer = pointer;
+    while(prepointer -> data = x) {
+        prepointer = pointer;
+        pointer = pointer -> next;
+    }
+    if(prepointer->data == x) {
+        prepointer -> next = newnode;
+        newnode -> next = pointer;
+    }
+}
